@@ -4,6 +4,15 @@ import Navbar from "./Components/Navbar";
 import Card from "./Components/Card"; // Import the Card component
 import "./App.css";
 
+// Mapping priority values to labels
+const priorityLabels = {
+    4: "Urgent",
+    3: "High",
+    2: "Medium",
+    1: "Low",
+    0: "No priority",
+};
+
 const App = () => {
     const [tickets, setTickets] = useState([]);
     const [users, setUsers] = useState([]);
@@ -84,7 +93,7 @@ const App = () => {
             }, {});
         } else if (groupBy === "priority") {
             groupedTickets = tickets.reduce((acc, ticket) => {
-                const groupKey = ticket.priority;
+                const groupKey = priorityLabels[ticket.priority] || "Unknown Priority";
                 if (!acc[groupKey]) acc[groupKey] = [];
                 acc[groupKey].push(ticket);
                 return acc;
@@ -117,7 +126,7 @@ const App = () => {
             <Navbar
                 group={groupBy}
                 order={sortBy}
-                onGroupchange={handleGroupChange}
+                onGroupChange={handleGroupChange}
                 onOrderChange={handleSortChange}
             />
 
@@ -136,6 +145,7 @@ const App = () => {
                                 statusIcon={null} // Add a status icon if needed
                                 statusColor="#000" // Define color for status icon
                                 bgColor="#f0f0f0" // Background color for user icon
+                                priorityLabel={priorityLabels[ticket.priority] || "Unknown Priority"}
                             />
                         ))}
                     </div>
