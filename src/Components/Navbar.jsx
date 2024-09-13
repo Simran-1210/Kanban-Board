@@ -1,4 +1,4 @@
-import "../UI/Navbar.css";
+import "../UI/Navbar.css"; 
 import { MdOutlineTune } from "react-icons/md";
 import { FaAngleDown } from "react-icons/fa";
 import { useState } from "react";
@@ -14,11 +14,11 @@ const orderOptions = [
     { label: "Title", value: "title" },
 ];
 
-const Navbar = ({ group, order, onGroupchange, onOrderChange }) => {
+const Navbar = ({ group, order, onGroupChange, onOrderChange }) => { // Changed to onGroupChange
     const [expandMore, setExpandMore] = useState(false);
 
     const handleGroupChange = (e) => {
-        onGroupchange(e.target.value);
+        onGroupChange(e.target.value); // Use onGroupChange
     };
 
     const handleOrderChange = (e) => {
