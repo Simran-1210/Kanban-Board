@@ -1,0 +1,91 @@
+.card {
+    /* Styles for card container */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #fff;
+    padding: 16px;
+    margin: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.card-id {
+    font-size: 14px;
+    color: #666;
+}
+
+.user-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    color: #1772d3;
+    font-weight: bold;
+    text-align: center;
+    font-size: 20px;
+    position: relative;
+}
+
+.user-initials {
+    z-index: 1;
+}
+
+.status-indicator {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+}
+
+.status-indicator.available {
+    background-color: green;
+}
+
+.status-indicator.not-available {
+    background-color: red;
+}
+
+.card-info {
+    margin-bottom: 8px;
+}
+
+.status-icon {
+    font-size: 18px;
+}
+
+.card-title {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-icon {
+    margin-right: 8px;
+}
+
+.card-tags {
+    display: flex;
+    align-items: center;
+}
+
+.card-tag {
+    margin-left: 4px;
+    font-size: 14px;
+    color: #333;
+}

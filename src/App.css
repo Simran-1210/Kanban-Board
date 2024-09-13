@@ -1,0 +1,124 @@
+.kanban-board {
+  display: flex;
+  justify-content: space-between; /* Space between columns to align them */
+  padding: 10px; /* Reduced padding for a tighter layout */
+  overflow-x: auto; /* Ensures the board scrolls horizontally if needed */
+  margin-top: 50px; /* Increased space between navbar and Kanban board */
+}
+.kanban-column {
+  width: 18%; /* Narrower columns to match the image */
+  background-color: #f4f4f4;
+  padding: 8px;
+  border-radius: 5px;
+  margin: 0 10px; /* Smaller margins for more compact design */
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+}
+
+.kanban-column-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 10px;
+}
+
+.kanban-column-header .column-title {
+  font-weight: bold;
+  font-size: 14px; /* Slightly smaller title text */
+  color: #333;
+}
+
+.kanban-column-header .column-icon {
+  cursor: pointer;
+  font-size: 14px; /* Adjust icon size */
+  color: #888;
+  margin-left: 5px;
+}
+
+/* Optional hover effect for the icon */
+.kanban-column-header .column-icon:hover {
+  color: #555;
+}
+
+.ticket {
+  background-color: #fff;
+  margin-bottom: 8px;
+  padding: 8px; /* Reduced padding for smaller ticket size */
+  border-radius: 5px;
+  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.1); /* Lighter shadow for a minimalist look */
+  font-size: 12px; /* Smaller font size in tickets */
+}
+
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-y: hidden;
+  width: 100%;
+}
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-y: hidden;
+  width: 100%;
+  padding: 20px; /* Add padding for the overall layout */
+}
+
+.boards_container {
+  flex: 1;
+  width: 100vw;
+  overflow-x: auto;
+  padding: 10px;
+}
+
+.app_boards {
+  display: flex;
+  min-width: fit-content;
+  gap: 10px; /* Reduced gap between columns */
+}
+
+.display-settings {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #f1f1f1;
+  border-bottom: 1px solid #ddd;
+}
+
+label {
+  margin-right: 20px;
+}
+
+select {
+  margin-left: 10px;
+  padding: 5px 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.kanban-column-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 10px;
+}
+
+.column-title {
+  font-weight: bold;
+  font-size: 14px;
+  color: #333;
+}
+
+.column-icon {
+  font-size: 20px; /* Adjust icon size */
+  color: #888;
+  margin-left: 5px;
+}
+
+.column-icon:hover {
+  color: #555;
+}
